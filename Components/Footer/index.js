@@ -7,6 +7,7 @@ import {
   Typography,
   TextField,
   TextareaAutosize,
+  Divider,
 } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -20,8 +21,8 @@ const index = () => {
       <Box
         sx={{
           flexGrow: 1,
-          mt: "5rem",
-          backgroundColor: "black",
+          mt: "189px",
+          backgroundColor: "#222222",
           color: "white",
         }}
       >
@@ -146,12 +147,13 @@ const index = () => {
                 </Box>
               </Grid>
             </Grid>
+            <Divider sx={{backgroundColor:"gray"}}/>
             <Grid container>
               <Grid
                 item
                 xs={12}
                 md={12}
-                sx={{ textAlign: "center", mb: "2rem" }}
+                sx={{ textAlign: "center", mb: "2rem",mt:"10px" }}
               >
                 © {new Date().getFullYear()} All Rights Reserved by Traideas.
               </Grid>

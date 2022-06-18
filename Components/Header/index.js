@@ -28,7 +28,7 @@ const index = () => {
           </Box>
 
           <Box>
-            <Link href="/Blog">
+            <Link href="/blog">
               <Button
                 variant="contained"
                 sx={{ backgroundColor: "#DCC2B3", color: "black" }}

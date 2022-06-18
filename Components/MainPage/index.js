@@ -4,17 +4,19 @@ import Herobanner from '../Herobanner'
 import Cartview from '../MainPage/Cartview'
 import LifeStyle from './LifeStyle'
 import AboutMe from './AboutMe'
+import BlogSection from './BlogSection'
 
 
 
 const index = () => {
     return (
-        <Box >
+        <Box  >
             
          <Herobanner/> 
          <Cartview/>
          <LifeStyle/>
        <AboutMe/>
+       <BlogSection/>
         </Box>
     );
 };
