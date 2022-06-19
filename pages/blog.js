@@ -1,22 +1,32 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import BlogShow from '../Components/BlogShow'
+import BlogShow from "../Components/BlogShow";
+import Header from '../Components/Header'
 
 const blog = ({ posts }) => {
-  return <>
-<Grid container >
-    <Grid item xs={12} md={12}>
-    <Grid container >
-        {posts.map(data=>(
-            <BlogShow key={data.id} data={data}/>
-        ))}
+  return (
+    <>
+      <Grid container>
+        <Grid item xs={12} md={12}>
+          <Grid container>
+            {posts.map((data) => (
+              <BlogShow key={data.id} data={data} />
+            ))}
+          </Grid>
         </Grid>
-    </Grid>
-</Grid>
-    
-  </>;
+      </Grid>
+    </>
+  );
 };
 
+blog.getLayout=function getLayout(page){
+return(
+  <>
+  <Header/>
+  {page}
+  </>
+)
+}
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library

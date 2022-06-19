@@ -27,13 +27,22 @@ const index = () => {
             </Link>
           </Box>
 
-          <Box>
+          <Box >
             <Link href="/blog">
               <Button
                 variant="contained"
                 sx={{ backgroundColor: "#DCC2B3", color: "black" }}
               >
                 Blog
+              </Button>
+            </Link>
+
+            <Link href="/login">
+              <Button
+                variant="contained"
+                sx={{ backgroundColor: "#DCC2B3", color: "black",ml:"16px" }}
+              >
+                Login
               </Button>
             </Link>
           </Box>
