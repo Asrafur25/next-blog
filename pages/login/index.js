@@ -13,7 +13,7 @@ import { useForm } from "react-hook-form";
 import Image from "next/image";
 import useAuth from "../../hooks/useAuth";
 
-const index = () => {
+const Login = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const { user, authError, googleSign } = useAuth();
@@ -86,7 +86,7 @@ const index = () => {
   );
 };
 
-index.getLayout = function getLayout(page) {
+Login.getLayout = function getLayout(page) {
   return <>{page}</>;
 };
-export default index;
+export default Login;

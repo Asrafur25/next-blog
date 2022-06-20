@@ -7,8 +7,14 @@ import logoImg from "../../image/Asset 1@2x.png";
 import { Button, Typography } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
+import useAuth from "../../hooks/useAuth";
+import useFirebase from "../../hooks/useFirebase";
+
 
 const index = () => {
+  const { user,logout } = useFirebase();
+
+  
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
       <Container maxWidth="xl">
@@ -27,7 +33,7 @@ const index = () => {
             </Link>
           </Box>
 
-          <Box >
+          <Box>
             <Link href="/blog">
               <Button
                 variant="contained"
@@ -37,14 +43,22 @@ const index = () => {
               </Button>
             </Link>
 
-            <Link href="/login">
-              <Button
-                variant="contained"
-                sx={{ backgroundColor: "#DCC2B3", color: "black",ml:"16px" }}
-              >
-                Login
-              </Button>
-            </Link>
+             {user.email ? (
+              <Button onClick={logout}>Log Out</Button>
+            ) : (
+              <Link href="/login">
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "#DCC2B3",
+                    color: "black",
+                    ml: "16px",
+                  }}
+                >
+                  Login
+                </Button>
+              </Link>
+            )} 
           </Box>
         </Toolbar>
       </Container>

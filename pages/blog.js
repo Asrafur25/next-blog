@@ -2,8 +2,11 @@ import { Grid } from "@mui/material";
 import React from "react";
 import BlogShow from "../Components/BlogShow";
 import Header from '../Components/Header'
+import useAuth from "../hooks/useAuth";
 
-const blog = ({ posts }) => {
+const blog = ({ posts }) => { 
+ 
+
   return (
     <>
       <Grid container>
