@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
 
   console.log("private user", user)
 
-  if (!user) {
+  if (!user.email) {
     console.log("going to loginssssssssssssssssss")
     router.push("/login");
   } else
