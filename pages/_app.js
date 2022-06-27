@@ -4,7 +4,7 @@ import AuthProvider from "../Context/AuthProvider/AuthProvider";
 import PrivateRoute from "../utilities/PrivateRoute";
 
 function MyApp({ Component, pageProps }) {
-  console.log({Component},{pageProps})
+  /* console.log({Component},{pageProps}) */
   if (Component.getLayout) {
     return Component.getLayout(
       <AuthProvider>

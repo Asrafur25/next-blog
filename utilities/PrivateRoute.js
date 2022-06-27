@@ -1,3 +1,4 @@
+import { CircularProgress } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect, useMemo } from "react";
 import useAuth from "../hooks/useAuth";
@@ -10,7 +11,7 @@ const PrivateRoute = ({ children }) => {
 
   console.log("private user", user);
 
-  useEffect(() => {
+  useEffect (() => {
     if (!isLoading) {
       //auth is initialized and there is no user
       if (!user.email) {
@@ -29,7 +30,7 @@ const PrivateRoute = ({ children }) => {
 
   // return <>{user ? children : null}</>;
   if (isLoading) {
-    return <h1>Application Loading</h1>;
+    return <CircularProgress/>;
   }
 
   if (user) {
